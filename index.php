@@ -3,33 +3,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Shop Item - Start Bootstrap Template</title>
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/shop-item.css" rel="stylesheet">
-
-
-</head>
+<?php include ("head.php") ?>
 <body>
     <section class="container">
+
+    <?php if(isset($_GET['disconnected'])){
+        if ($_GET['disconnected'] == '1'){
+            ?> <div class="alert alert-success" role="alert">
+           Vous êtes bien déconnecté
+          </div> <?php
+          session_start();
+          $_SESSION[""]  = "";
+          session_destroy();
+        }
+    }else if (isset($_GET['auth']) && ($_GET['auth'] == 2)){
+
+      ?>  <div class="alert alert-danger" role="alert">
+        Mauvais login ou password erroné, veuillez réessayer! 
+       </div> 
+
+   <?php }?>
+
+
             <form class ="my-3" action="connection.php" method="POST">
                 <div class="mb-3">
                     <label for="userName" class="form-label">Identifiant</label>
-                    <input type="text" class="form-control" name = "userName" id="userName" >
+                    <input type="text" class="form-control" name = "userName" id="userName" placeholder = "Votre identifiant" >
                     
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password" id="password">
+                    <input type="password" class="form-control" name="password" id="password" placeholder = "Mot de passe">
                 </div>
 
                 </div>

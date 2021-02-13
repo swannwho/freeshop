@@ -2,18 +2,18 @@
 
 session_start();
 
-print_r($_POST);
-
 if(isset($_POST['userName']) && isset($_POST['password'])){
     if($_POST['userName'] == "root" && $_POST["password"] == "root"){
 
-        $_SESSION['username'] = 'root';
-        $_SESSION['username'] = 'root';
+        $_SESSION['prenom']  = 'prenomDeBase';
+        $_SESSION['nom']  = 'nomDeBase';
+        $_SESSION['panier'] = array();
 
-        header("Location: accueil.php");
+        header("Location: accueil.php?current=Accueil");
 
     }else{
         header("Location: index.php?auth=2");
+
     }
     
 

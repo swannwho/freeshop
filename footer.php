@@ -1,5 +1,5 @@
  <!-- Footer -->
- <footer class="py-5 bg-dark">
+ <footer class="py-4 bg-dark fixed-bottom mt-2  ">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; FreeShop 2021</p>
     </div>

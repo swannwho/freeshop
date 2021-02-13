@@ -64,14 +64,14 @@ $products = array(
       'description' => 'Croustillant et appétissant'
     )
   ),
-  'Cosmétique' => array(
+  'Cosmetique' => array(
     array(
       'id' => 5,
       'name' => 'Crème Inconnue',
       'description' => 'Une crème dont on ne connait pas du tout les effets. Vous pouvez la tester, mais il y a sûrement des risques.'
     )
   ),
-  'Bandes dessinées' => array(
+  'BDs' => array(
     array(
       'id' => 6,
       'name' => 'Attaque des titans',

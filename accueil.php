@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <h1 class="my-4">Bienvenue sur le FreeShop</h1>
-                    <p >Bonjour Toto Piou ! Vous pouvez dès à présent commencer à faire votre panier en sélectionnant dans notre liste de produits ce dont vous avez besoin.   
+                    <p >Bonjour <?= $_SESSION['prenom']. " " .$_SESSION['nom'] ?> ! Vous pouvez dès à présent commencer à faire votre panier en sélectionnant dans notre liste de produits ce dont vous avez besoin.   
                     </p>
                 </div>
             </div>
